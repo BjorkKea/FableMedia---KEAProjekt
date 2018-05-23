@@ -6,29 +6,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MysqlController {
 
-//    @RequestMapping(value="/")
-//    public String home(){
-//        return "home";
-//    }
+
 
     @RequestMapping(value="/login")
     public String login(){
         return "login";
     }
 
-    @RequestMapping(value="/user")
+    @RequestMapping(value="/userHome")
     public String user(){
-        return "user";
+        return "userHome";
     }
 
     @RequestMapping(value="/")
     public String admin(){
-        return "admin";
+        return "adminHome";
     }
 
-    @RequestMapping(value="/403")
-    public String Error403(){
-        return "403";
-    }
+
 }
 

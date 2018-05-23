@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Home admin</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+
+    <style>
+        body {
+            background: url(http://fablemedia.dk/wp-content/uploads/2016/11/fable-affiliates-griffin-backgroundpx-1.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .logout input[type="submit"]
+        {
+            border: none;
+            outline: none;
+            background: #d3b15c;
+            color: #fff;
+            font-size: 14px;
+            box-shadow: 2px 2px 4px #A4A4A4;
+            border-radius: 2px;
+            position:fixed;
+            right:55px;
+            bottom:20px;
+
+        }
+        .container {
+            width: 1024px;
+            margin: 0 auto;
+
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            /*padding: 8px;*/
+            padding: 5px 8px 5px 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        .btn-basic{
+            box-shadow: 2px 2px 4px #A4A4A4;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+
+<h1 style="color: #d3b15c;">Fable Media - Domains</h1>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Domain Id</th>
+            <th>Domain provider</th>
+            <th>Domain name</th>
+            <th>Created</th>
+            <th>Expires</th>
+            <th>Auto renew</th>
+            <th>Status</th>
+            <th>Settings</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr> <!--th:each="domains: ${}">-->
+            <!--<td th:text=""/>-->
+            <!--<td th:text=""/>-->
+            <!--<td th:text=""/>-->
+            <!--<td th:text=""/>-->
+            <!--<td th:text=""/>-->
+            <!--<td th:text=""/>-->
+            <!--<td th:text=""/>-->
+
+        </tr>
+
+        </tbody>
+    </table>
+    <div>
+        <a href="">
+            <button class="pull-right btn btn-basic">Refresh</button>
+        </a>
+    </div>
+    <div class="logout">
+    <form th:action="@{/logout}" method="post">
+        <input type="submit"  value="Logout" />
+    </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
